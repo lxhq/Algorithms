@@ -1,3 +1,4 @@
+//Untested Yet!!!!! May contain bugs
 //This is a directed graph with dfs algorithm that can find the bridge and strongly connected components in the graph 
 //The node itself is counted as one of those components
 //(Tarjan's algorithm)
@@ -79,7 +80,7 @@ class DFS {
                 onStack[node] = false;
                 low[node] = ids[at];
                 edgesInCycles.add(new int[]{edges[node], node});
-                node = edges[node];
+                node = stack.pop();
             }
             sccCount++;
         }
