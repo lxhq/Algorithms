@@ -49,7 +49,7 @@ class DFS {
         id = 0;
         for (int i = 0; i < graph.size(); i++) {
             if (ids[i] == -1) {
-                dfs(0);
+                dfs(i);
             }
         }
     }
