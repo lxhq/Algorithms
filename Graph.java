@@ -4,7 +4,6 @@
 //https://www.youtube.com/watch?v=TyWtx7q2D7Y
 //https://www.youtube.com/watch?v=aZXi1unBdJA
 
-class UnDirGraph {
 class Graph {
     List<Integer>[] graph;
     public Graph(int size) {
