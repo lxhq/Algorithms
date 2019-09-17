@@ -11,10 +11,11 @@
 ### 2. For dynamic programming: 
 #### 1. Please not only consider look back but also consider look forward
 * Example: 403. Frog Jump.
-#### 2. Please not only consider using a int[] or int[][] to record the dp states. The size of every stages' dp states my change. So we may use a changable structure (Map, Set, List ...) to store states in every stages. This is easy to use when dp transfer function only care about the i - 1 stage. So we can only keep one changeable structure. 
+#### 2. Please not only consider using a int[] or int[][] to record the dp states. The size of every stages' dp states may change. So we may use a changable structure (Map, Set, List ...) to store states in every stages. This is easy to use when dp transfer function only care about the i - 1 stage. So we can only keep one changeable structure. 
 * Example: 1187. Make Array Strictly Increasing
 #### 3. If a dp algorithm's transfer function only contains dp[i - 1], it is really similier to a kind of BFS algorithm
-
+#### 4. dp(always bottom up) is very similiar to divide and counter(top down). When you have already figured out the transfer function but have some problem about how to run the for loop, Please consider using the divide and counter(top down), divide the whole problem into subproblem in recursive calls.
+* Example: 375. Guess Number Higher or Lower II, 516. Longest Palindromic Subsequence
 
 ### 3. For tree - related problem please consider divide it to sub-trees
 * Use DFS but not BFS to solve sub-tree problems. Please realize that root.left and root.right is the same tree as root.
