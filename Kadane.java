@@ -1,11 +1,13 @@
 //Kadane's algorithm for finding the maxmium subarray in array
-public int kadane(int[] arr) {
-    int maxSoFar = 0;
-    int[] maxEndHere = new int[arr.lenght];
-    maxEndHere[0] = arr[0];
-    for (int i = 1; i < n; i++) {
-        maxEndHere[i] = Math.max(arr[i], maxEndHere[i - 1] + arr[i]);
-        maxSoFar = Math.max(maxSoFar, maxEndHere[i]);
+class Solution {
+    public int maxSubArray(int[] nums) {
+        if (nums == null || nums.length == 0) return 0;
+        int runningSum = nums[0];
+        int res = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            runningSum = nums[i] + (runningSum > 0 ? runningSum : 0);
+            res = Math.max(res, runningSum);
+        }
+        return res;
     }
-    return maxSoFar;
 }
